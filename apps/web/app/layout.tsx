@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Newsreader } from "next/font/google";
-import "./globals.css";
+import "@repo/ui/globals.css";
 
 const figtree = Figtree({
   variable: "--font-figtree",
