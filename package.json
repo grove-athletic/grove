@@ -11,8 +11,8 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "preview-storybook": "turbo run preview-storybook",
-    "storybook": "pnpm --filter storybook-app dev",
-    "build-storybook": "pnpm --filter storybook-app build",
+    "storybook": "pnpm --filter storybook dev",
+    "build-storybook": "pnpm --filter storybook build",
     "ui": "pnpm --filter @repo/ui ui"
   },
   "devDependencies": {
