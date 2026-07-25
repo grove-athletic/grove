@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "grove",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -13,17 +13,8 @@
     "turbo": "^2.10.6",
     "typescript": "5.9.2"
   },
+  "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "npm",
-      "version": "11.17.0"
-    }
-  },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }
