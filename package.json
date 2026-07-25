@@ -11,14 +11,16 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "preview-storybook": "turbo run preview-storybook",
-    "storybook": "pnpm --filter storybook dev",
-    "build-storybook": "pnpm --filter storybook build",
+    "storybook": "pnpm --filter storybook-app dev",
+    "build-storybook": "pnpm --filter storybook-app build",
     "ui": "pnpm --filter @repo/ui ui"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.5",
-    "turbo": "^2.10.6"
+    "turbo": "^2.10.6",
+    "storybook": "^10.5.4",
+    "storybook": "^10.5.4"
   },
   "packageManager": "pnpm@10.6.0"
 }
