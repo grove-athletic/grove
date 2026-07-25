@@ -29,6 +29,8 @@ npx create-turbo@latest -e design-system
 
 - `pnpm build` - Build all packages, including the Storybook site
 - `pnpm dev` - Run all packages locally and preview with Storybook
+- `pnpm storybook` - Start the Storybook app in development mode
+- `pnpm build-storybook` - Build the Storybook static site
 - `pnpm lint` - Lint all packages
 - `pnpm changeset` - Generate a changeset
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
@@ -43,7 +45,7 @@ Using Turborepo simplifies managing your design system monorepo, as you can have
 
 This Turborepo includes the following packages and applications:
 
-- `apps/docs`: Component documentation site with Storybook
+- `apps/storybook`: Component verification and documentation site with Storybook
 - `packages/ui`: Core React components
 - `packages/typescript-config`: Shared `tsconfig.json`s used throughout the Turborepo
 - `packages/eslint-config`: ESLint preset
@@ -139,27 +141,24 @@ Storybook provides us with an interactive UI playground for our components. This
 
 For example, here's the included Story for our `Button` component:
 
-```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@repo/ui/button';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+```tsx:apps/storybook/stories/button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '@repo/ui/components/button';
 
-<Meta title="Components/Button" component={Button} />
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+};
 
-# Button
+export default meta;
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+type Story = StoryObj<typeof Button>;
 
-## Props
-
-<Props of={Box} />
-
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
+export const Default: Story = {
+  args: {
+    children: 'Hello',
+  },
+};
 ```
 
 This example includes a few helpful Storybook scripts:

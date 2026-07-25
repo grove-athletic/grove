@@ -1,0 +1,32 @@
+{
+  "name": "storybook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "preview-storybook": "storybook preview",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@storybook/addon-docs": "^10.5.4",
+    "@storybook/addon-links": "^10.5.4",
+    "@storybook/react-vite": "^10.5.4",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "vite": "^5.0.0",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

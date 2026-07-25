@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:wght@400;500;600;700&display=swap");
+
 @source "../../../apps/**/*.{ts,tsx}";
 @source "../**/*.{ts,tsx}";
-
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
